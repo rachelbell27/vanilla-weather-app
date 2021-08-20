@@ -17,6 +17,11 @@ a {
 
 li {
   list-style: none;
+  color: #9ba6a5;
+}
+.active {
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 .container {
@@ -39,5 +44,9 @@ li {
 .temp {
   font-size: 16px;
   position: relative;
-  top: -15px;
+  top: -13px;
+}
+
+.list-info {
+  color: black;
 }

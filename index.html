@@ -16,8 +16,7 @@
   </head>
   <body>
     <div class="container">
-      <!-- search engine, API integration, unit conversion, wind speed,
-    precipitation, weather description, and weather icon are mandatory.-->
+
       <div class="form-wrapper">
         <form autocomplete="off" class="mb-3">
           <div class="row">
@@ -26,13 +25,15 @@
                 type="search"
                 placeholder="Type a city..."
                 class="form-control"
+                id="search-input"
               />
             </div>
             <div class="col-3">
               <input
                 type="submit"
                 value="Search"
-                class="btn btn-primary w-100"
+                class="btn btn-primary"
+                id="search-submit"
               />
             </div>
           </div>
@@ -48,21 +49,34 @@
           />
         </h1>
         <h2>
-          26<span class="temp"
-            ><a href="#">°C </a>
+          <span id="temperature-element">26</span><span class="temp"
+            ><a href="#" class="active" id="celsius-temperature">°C </a>
             |
-            <a href="#">°F</a>
+            <a href="#" id-"fahrenheit-temperature">°F</a>
           </span>
         </h2>
 
         <div class="row">
           <ul class="col-6">
-            <li>Last updated: Friday 12:53</li>
-            <li>Sky: Scattered Clouds</li>
+            <li>
+              Last updated:
+              <span class="list-info" id="date-time-element"
+                >Friday, 12:53</span
+              >
+            </li>
+            <li>
+              Sky:
+              <span class="list-info" id="sky-element">Scattered Clouds</span>
+            </li>
           </ul>
           <ul class="col-6">
-            <li>Humidity: 69%</li>
-            <li>Wind speed: 0.89km/h</li>
+            <li>
+              Humidity: <span class="list-info" id="humidity-element">69%</span>
+            </li>
+            <li>
+              Wind speed:
+              <span class="list-info" id="wind-element">0.89km/h</span>
+            </li>
           </ul>
         </div>
       </div>
