@@ -18,7 +18,7 @@
     <div class="container">
 
       <div class="form-wrapper">
-        <form autocomplete="off" class="mb-3">
+        <form autocomplete="off" class="mb-3" id="search-form">
           <div class="row">
             <div class="col-9">
               <input
@@ -26,6 +26,8 @@
                 placeholder="Type a city..."
                 class="form-control"
                 id="search-input"
+                required
+            
               />
             </div>
             <div class="col-3">
@@ -41,7 +43,7 @@
       </div>
       <div class="wrapper">
         <h1>
-          <span id="city-element">New York</span>, US
+          <span id="city-element">New York</span>, <span id="country-element">US</span>
           <img
             src="http://openweathermap.org/img/wn/10d@2x.png"
             alt="weather icon"
@@ -66,21 +68,21 @@
             </li>
             <li>
               Sky:
-              <span class="list-info" id="sky-element">Scattered Clouds</span>
+              <span class="list-info" id="sky-element">Scattered dsfClouds</span>
             </li>
           </ul>
           <ul class="col-6">
             <li>
-              Humidity: <span class="list-info" id="humidity-element">69%</span>
+              Humidity: <span class="list-info" id="humidity-element">69</span>%
             </li>
             <li>
               Wind speed:
-              <span class="list-info" id="wind-element">0.89km/h</span>
+              <span class="list-info" id="wind-element">0.89</span>km/h
             </li>
           </ul>
         </div>
       </div>
     </div>
   </body>
-  <script src="src/weather.js"></script>
+  <script src="src/index.js"></script>
 </html>
