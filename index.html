@@ -14,6 +14,45 @@
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- search engine, API integration, unit conversion, wind speed,
+    precipitation, weather description, and weather icon are mandatory.-->
+      <div class="form-wrapper row">
+        <form autocomplete="off">
+          <div class="col-9">
+            <div class="form-floating">
+              <input type="search" placeholder="Type a city..." />
+            </div>
+          </div>
+          <div class="form-floating">
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-primary w-100 text-nowrap"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="wrapper">
+        <h1>New York</h1>
+        <h2>26 °C | °F</h2>
+        <h2>
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+          />
+        </h2>
+        <ul>
+          <li>Last updated: Friday 12:53</li>
+          <li>Sky: Scattered Clouds</li>
+          <li>Humidity: 69%</li>
+          <li>Wind speed: 0.89km/h</li>
+        </ul>
+      </div>
+    </div>
+  </body>
   <script src="src/weather.js"></script>
 </html>
