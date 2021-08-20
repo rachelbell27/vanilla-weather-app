@@ -41,7 +41,7 @@ function handleWeather(response) {
   let windSpeed = response.data.wind.speed;
   let imageResponse = response.data.weather[0].icon;
   let skyResponse = response.data.weather[0].description;
-  let imgURL = `http://openweathermap.org/img/wn/${imageResponse}@2x.png`;
+  let imgURL = `https://openweathermap.org/img/wn/${imageResponse}@2x.png`;
   console.log(skyResponse, imageResponse, imgURL);
   displayDate.innerHTML = formatDate(new Date());
   displayTemp.innerHTML = celsiusTemp;
