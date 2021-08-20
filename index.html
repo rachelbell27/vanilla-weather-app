@@ -39,20 +39,32 @@
         </form>
       </div>
       <div class="wrapper">
-        <h1>New York</h1>
-        <h2>26 °C | °F</h2>
-        <h2>
+        <h1>
+          <span id="city-element">New York</span>, US
           <img
             src="http://openweathermap.org/img/wn/10d@2x.png"
             alt="weather icon"
+            id="weather-icon"
           />
+        </h1>
+        <h2>
+          26<span class="temp"
+            ><a href="#">°C </a>
+            |
+            <a href="#">°F</a>
+          </span>
         </h2>
-        <ul>
-          <li>Last updated: Friday 12:53</li>
-          <li>Sky: Scattered Clouds</li>
-          <li>Humidity: 69%</li>
-          <li>Wind speed: 0.89km/h</li>
-        </ul>
+
+        <div class="row">
+          <ul class="col-6">
+            <li>Last updated: Friday 12:53</li>
+            <li>Sky: Scattered Clouds</li>
+          </ul>
+          <ul class="col-6">
+            <li>Humidity: 69%</li>
+            <li>Wind speed: 0.89km/h</li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>

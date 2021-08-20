@@ -1,6 +1,23 @@
 body {
   background: #e7eaf6;
 }
+h1 {
+  margin: 0;
+  line-height: 1;
+}
+h2 {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  font-size: 36px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
 
 .container {
   max-width: 540px;
@@ -13,4 +30,14 @@ body {
 .form-wrapper {
   display: inline;
   text-align: center;
+}
+
+.btn-primary {
+  background-color: #0f3057;
+  border: #0f3057;
+}
+.temp {
+  font-size: 16px;
+  position: relative;
+  top: -15px;
 }
