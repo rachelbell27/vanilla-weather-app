@@ -18,19 +18,21 @@
     <div class="container">
       <!-- search engine, API integration, unit conversion, wind speed,
     precipitation, weather description, and weather icon are mandatory.-->
-      <div class="form-wrapper row">
-        <form autocomplete="off">
-          <div class="col-9">
-            <div class="form-floating">
-              <input type="search" placeholder="Type a city..." />
+      <div class="form-wrapper">
+        <form autocomplete="off" class="mb-3">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city..."
+                class="form-control"
+              />
             </div>
-          </div>
-          <div class="form-floating">
             <div class="col-3">
               <input
                 type="submit"
                 value="Search"
-                class="btn btn-primary w-100 text-nowrap"
+                class="btn btn-primary w-100"
               />
             </div>
           </div>

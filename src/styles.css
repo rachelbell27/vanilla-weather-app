@@ -8,6 +8,7 @@ body {
   margin: 60px auto;
   border-radius: 5px;
   text-align: center;
+  padding: 60px;
 }
 .form-wrapper {
   display: inline;
