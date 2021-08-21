@@ -51,7 +51,6 @@ function displayCelsius(event) {
 }
 
 function handleWeather(response) {
-  console.log(response);
   celsiusTemp = Math.round(response.data.main.temp);
   let cityName = response.data.name;
   let countryName = response.data.sys.country;
@@ -60,7 +59,7 @@ function handleWeather(response) {
   let imageResponse = response.data.weather[0].icon;
   let skyResponse = response.data.weather[0].description;
   let imgURL = `https://openweathermap.org/img/wn/${imageResponse}@2x.png`;
-  console.log(skyResponse, imageResponse, imgURL);
+  celsiusSelector.click();
   displayDate.innerHTML = formatDate(new Date());
   displayTemp.innerHTML = celsiusTemp;
   displayCity.innerHTML = cityName;
