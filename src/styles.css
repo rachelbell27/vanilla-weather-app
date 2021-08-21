@@ -40,6 +40,12 @@ li {
 .btn-primary {
   background-color: #0f3057;
   border: #0f3057;
+  transition: all 200ms ease-in-out;
+}
+.btn-primary:hover {
+  background-color: #668ba4;
+  color: #fcfefe;
+  border: #fcfefe;
 }
 .temp {
   font-size: 16px;
@@ -49,4 +55,5 @@ li {
 
 .list-info {
   color: black;
+  text-transform: capitalize;
 }

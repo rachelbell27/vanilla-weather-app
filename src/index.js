@@ -10,6 +10,9 @@ let displayHumidity = document.querySelector("#humidity-element");
 let displayWind = document.querySelector("#wind-element");
 let searchForm = document.querySelector("#search-form");
 let displayImage = document.querySelector("#weather-icon");
+let celsiusSelector = document.querySelector("#celsius-temperature");
+let fahrenheitSelector = document.getElementById("fahrenheit-temperature");
+let celsiusTemp = 13;
 
 function formatDate(now) {
   let days = [
@@ -32,9 +35,24 @@ function formatDate(now) {
   }
   return `${weekDay}, ${hour}:${minute}`;
 }
+function calculateFahrenheit(event) {
+  event.preventDefault();
+  celsiusSelector.classList.remove("active");
+  fahrenheitSelector.classList.add("active");
+  let fahrenheitTemp = Math.round((celsiusTemp * 9) / 5 + 32);
+  displayTemp.innerHTML = fahrenheitTemp;
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  fahrenheitSelector.classList.remove("active");
+  celsiusSelector.classList.add("active");
+  displayTemp.innerHTML = celsiusTemp;
+}
+
 function handleWeather(response) {
   console.log(response);
-  let celsiusTemp = Math.round(response.data.main.temp);
+  celsiusTemp = Math.round(response.data.main.temp);
   let cityName = response.data.name;
   let countryName = response.data.sys.country;
   let humidity = response.data.main.humidity;
@@ -53,12 +71,19 @@ function handleWeather(response) {
   displaySky.innerHTML = skyResponse;
 }
 
-function getWeather(event) {
+function handleSearch(event) {
   event.preventDefault();
-  let city = document.querySelector("#search-input");
+  let searchCity = document.querySelector("#search-input");
+  getWeather(searchCity.value);
+}
+
+function getWeather(city) {
   axios
-    .get(`${apiRoot}units=${units}&q=${city.value}&appid=${key}`)
+    .get(`${apiRoot}units=${units}&q=${city}&appid=${key}`)
     .then(handleWeather);
 }
 
-searchForm.addEventListener("submit", getWeather);
+getWeather("New York");
+searchForm.addEventListener("submit", handleSearch);
+fahrenheitSelector.addEventListener("click", calculateFahrenheit);
+celsiusSelector.addEventListener("click", displayCelsius);
