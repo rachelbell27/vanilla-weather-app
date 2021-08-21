@@ -1,5 +1,6 @@
 body {
   background: #e7eaf6;
+  text-align: center;
 }
 h1 {
   margin: 0;
@@ -10,7 +11,13 @@ h2 {
   padding-bottom: 15px;
   font-size: 36px;
 }
-a {
+
+small {
+  font-size: 10px;
+  color: #606470;
+  text-align: center;
+}
+.wrapper a {
   text-decoration: none;
   color: black;
 }
@@ -28,6 +35,7 @@ li {
   max-width: 540px;
   background: #fcfefe;
   margin: 60px auto;
+  margin-bottom: 0px;
   border-radius: 5px;
   text-align: center;
   padding: 60px;
