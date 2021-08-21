@@ -54,6 +54,7 @@ function handleWeather(response) {
 }
 
 function getWeather(event) {
+  event.preventDefault();
   let city = document.querySelector("#search-input");
   axios
     .get(`${apiRoot}units=${units}&q=${city.value}&appid=${key}`)
