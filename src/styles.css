@@ -11,6 +11,12 @@ h2 {
   padding-bottom: 15px;
   font-size: 36px;
 }
+hr {
+  border-color: #0f3057;
+  background-color: #0f3057;
+  color: #0f3057;
+  height: 15px;
+}
 
 small {
   font-size: 10px;
@@ -64,4 +70,17 @@ li {
 .list-info {
   color: black;
   text-transform: capitalize;
+}
+
+.forecast-date {
+  font-weight: bold;
+}
+
+.forecast-temperature-max {
+  font-size: 16px;
+}
+
+.forecast-temperature-min {
+  font-size: 13px;
+  opacity: 0.75;
 }
