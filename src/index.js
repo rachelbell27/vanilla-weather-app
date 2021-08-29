@@ -11,30 +11,30 @@ let displayHumidity = document.querySelector("#humidity-element");
 let displayWind = document.querySelector("#wind-element");
 let searchForm = document.querySelector("#search-form");
 let displayImage = document.querySelector("#weather-icon");
+let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
 let temp = 13;
 let lat = 40.7143;
 let lon = -74.006;
 
 function formatDate(now) {
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
   let weekDay = days[now.getDay()];
   let hour = now.getHours();
-  if (now.getHours() < 10) {
-    hour = "0" + now.getHours();
+  let type = "am";
+  if (hour >= 12) {
+    hour = hour - 12;
+    type = "pm";
   }
   let minute = now.getMinutes();
-  if (now.getMinutes() < 10) {
-    minute = "0" + now.getMinutes();
+  if (minute < 10) {
+    minute = "0" + minute;
   }
-  return `${weekDay}, ${hour}:${minute}`;
+  return `${weekDay}, ${hour}:${minute}${type}`;
+}
+
+function formatDay(dt) {
+  let date = new Date(dt * 1000);
+  let day = date.getDay();
+  return days[day];
 }
 
 function handleForecast(response) {
@@ -48,7 +48,7 @@ function handleForecast(response) {
         forecastHTML +
         `          
         <div class="col-2">
-            <div class="forecast-date">${forecastDay.dt}</div>
+            <div class="forecast-date">${formatDay(forecastDay.dt)}</div>
             <img
               src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
