@@ -10,6 +10,7 @@ let displaySky = document.querySelector("#sky-element");
 let displayHumidity = document.querySelector("#humidity-element");
 let displayWind = document.querySelector("#wind-element");
 let searchForm = document.querySelector("#search-form");
+let searchBar = document.querySelector("#search-input");
 let displayImage = document.querySelector("#weather-icon");
 let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
 let temp = 13;
@@ -89,6 +90,7 @@ function handleWeather(response) {
   let imageResponse = response.data.weather[0].icon;
   let skyResponse = response.data.weather[0].description;
   let imgURL = `https://openweathermap.org/img/wn/${imageResponse}@2x.png`;
+  searchBar.value = "";
   displayDate.innerHTML = formatDate(new Date());
   displayTemp.innerHTML = temp;
   displayCity.innerHTML = cityName;
