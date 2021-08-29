@@ -62,9 +62,8 @@ li {
   border: #fcfefe;
 }
 .btn-primary:focus {
-  background-color: #668ba4;
-  color: #fcfefe;
-  border: #fcfefe;
+  background-color: #0f3057;
+  border: #0f3057;
 }
 .temp {
   font-size: 16px;
